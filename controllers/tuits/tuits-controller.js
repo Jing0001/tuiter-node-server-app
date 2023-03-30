@@ -20,7 +20,7 @@ const templateTuit = {
 
 const createTuit = (req, res) => {
     let newTuit = req.body;
-    newTuit._id = (new Date()).getTime();
+    newTuit._id = (new Date()).getTime()+'';
     newTuit = {
         ...templateTuit,
         ...newTuit
