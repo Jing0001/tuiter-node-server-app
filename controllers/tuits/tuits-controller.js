@@ -1,8 +1,9 @@
 import * as tuitsDao from '../tuits/tuits-dao.js'
 
 const findTuits = async(req, res) => {
-    const tuits = await tuitsDao.findTuits()
-    res.json(tuits);
+    // const tuits = await tuitsDao.findTuits()
+    // res.json(tuits);
+    res.send('Life is goodddddd!')
 }
 
 const createTuit = async(req, res) => {
