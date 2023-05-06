@@ -1,11 +1,14 @@
 import * as tuitsDao from '../tuits/tuits-dao.js'
 
+// implement tuits controller defining the four CRUD operations requests from the client
+// separate the concerns of routing and data handling
 const findTuits = async(req, res) => {
     const tuits = await tuitsDao.findTuits()
     res.json(tuits);
 }
 
 const createTuit = async(req, res) => {
+    // retrieve data from HTTP body
     const newTuit = req.body;
     newTuit.image = "../images/nasa.jpg";
     newTuit.userName = "NASA";
