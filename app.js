@@ -12,6 +12,7 @@ import mongoose from "mongoose";
 
 const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
     || 'mongodb://localhost:27017/tuiter';
+// connect to the tuiter database
 mongoose.connect(CONNECTION_STRING);
 // creates an instance of the Express.js application, assigning it to the constant variable app
 const app = express();
